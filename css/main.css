@@ -1,0 +1,166 @@
+html {
+    padding: 0;
+    margin: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+    color: #000;
+    background-color: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.highlighted {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.review {
+    opacity: 70%;
+}
+
+.user-info > div > p:last-child {
+    opacity: 50%;
+    margin-top: 0;
+}
+
+.user-info > div > p:first-child {
+    margin-bottom: 0;
+}
+
+.user-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.user-info > img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+.testimonial {
+    width: 20%;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.testimonial p {
+    padding: 0 1rem;
+}
+
+.container > div:last-child > p:last-child {
+    line-height: 21px;
+}
+
+.quotation {
+    position: relative;
+    z-index: 10;
+}
+
+svg {
+    position: absolute;
+    right: 17%;
+    top: -105%;
+    z-index: -1;
+}
+
+.break {
+    width: 25%;
+}
+
+.violet {
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+}
+
+.white {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+
+
+.black {
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
+.gray {
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (min-width: 980px) {
+    body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+    }  
+
+    .container {
+        margin: 1rem 5rem;
+    }
+
+    .container > div:first-child, .container > div:nth-last-child(2) {
+        width: 50%;
+    }
+    
+    .container > div:last-child {
+        position: absolute;
+        right: 0;
+        width: 25%;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+    .testimonial {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        row-gap: 0;
+    }
+
+    svg {
+        right: 5%;
+        top: -160%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width:767px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        grid-row-gap: 1.2rem;
+        padding: 1rem;
+    }
+
+    .testimonial {
+        width: 90%;
+        padding: 1.2rem;
+    }
+
+    svg {
+        right: 0;
+        top: -50%;
+    }
+
+    .user-info {
+        column-gap: 0;
+    }
+}
